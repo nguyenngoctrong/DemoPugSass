@@ -35,9 +35,7 @@ header{
             padding-left: 4rem;
             transition: all .4s ease;
             &-catalog{
-                &>a:hover ~ .navbars__list-item,
-                &>i:hover ~ .navbars__list-item
-                {
+                &:hover .navbars__list-item{
                     display: grid;
                 }
             }
@@ -850,30 +848,39 @@ footer{
 @keyframes changeImg{
     0%{
         opacity: 1;
+        z-index:110;
     }
     60%{
         opacity: 1;
+        z-index:110;
     }
     70%{
         opacity: 0;
+        z-index:100;
     }
     100%{
         opacity: 0;
+        z-index:100;
     }
+
 
 }
 @keyframes changeImg1{
     0%{
         opacity: 0;
+        z-index:100;
     }
     60%{
         opacity: 0;
+        z-index:100;
     }
     70%{
         opacity: 1;
+        z-index:110;
     }
     100%{
         opacity: 1;
+        z-index:110;
     }
 }
 

@@ -69,7 +69,7 @@ header .navbars__list {
   padding-left: 4rem;
   transition: all 0.4s ease;
 }
-header .navbars__list-catalog > a:hover ~ .navbars__list-item, header .navbars__list-catalog > i:hover ~ .navbars__list-item {
+header .navbars__list-catalog:hover .navbars__list-item {
   display: grid;
 }
 header .navbars__list-item {
@@ -989,6 +989,12 @@ footer .footer-contact .footer-item:nth-child(4) .footer-item__address p:nth-chi
     color: #000000;
     text-transform: uppercase;
     font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+  }
+  header .navbars__item > li:hover > a {
+    color: #DBCC8F;
+    background-color: #fff;
+    border-radius: 3px;
   }
   header .navbars__menu {
     display: none;
@@ -1155,29 +1161,37 @@ footer .footer-contact .footer-item:nth-child(4) .footer-item__address p:nth-chi
 @keyframes changeImg {
   0% {
     opacity: 1;
+    z-index: 110;
   }
   60% {
     opacity: 1;
+    z-index: 110;
   }
   70% {
     opacity: 0;
+    z-index: 100;
   }
   100% {
     opacity: 0;
+    z-index: 100;
   }
 }
 @keyframes changeImg1 {
   0% {
     opacity: 0;
+    z-index: 100;
   }
   60% {
     opacity: 0;
+    z-index: 100;
   }
   70% {
     opacity: 1;
+    z-index: 110;
   }
   100% {
     opacity: 1;
+    z-index: 110;
   }
 }
 
