@@ -1,0 +1,60 @@
+mixin loadService(services)
+    .services__list
+        each service in services
+            .services__item 
+                i(class=service.icon)
+                p.services__item-title #{service.title}
+                p.services__item-decription #{service.decription}
+
+mixin loadProducts(products)
+    .products__list
+        each product in products
+            .products__item 
+                .products__header
+                    img(src=product.img)
+                    .products__header-back
+                    button.products__header-btn add to cart
+                        span.fas.fa-plus
+                    button.products__header-btn.-white  buy now
+                        span.fas.fa-shopping-cart 
+                    if product.saleOff != ""
+                        p.products__header-tag #{product.saleOff} % off
+                .products__footer
+                    p.products__footer-type
+                        span lifestyle
+                        span 
+                            i.far.fa-star 
+                            i.far.fa-star 
+                            i.far.fa-star 
+                            i.far.fa-star 
+                            i.far.fa-star 
+                    p.products__footer-name=product.name
+                    if product.newPrice ==""
+                        p.products__footer-price $#{product.oldPrice} 
+                    else
+                        p 
+                            del.products__footer-price.-del $#{product.oldPrice}
+                            span.products__footer-price $#{product.newPrice }
+        
+mixin loadCollection(collection)
+    .collection__list-img
+        each cl in collection
+            .collection__item
+                .collection__item-img
+                    if cl.img !=""
+                        img(src=cl.img)
+                    .collection__content
+                        p.collection__content-sub= cl.sub
+                        h2.collection__content-name=cl.title 
+                        p.collection__content-decription= cl.decription
+                        a(href="#") Shop now
+    
+            
+
+
+
+
+
+
+            
+    

@@ -1,0 +1,178 @@
+extends includes/layout
+block main
+        include includes/database
+        include includes/mixin
+        header
+            nav.navbars
+                .navbars__branch-name 
+                    p Minishop 
+                input(type="checkbox" id="menu-toggle")
+                .navbars__list 
+                    ul.navbars__item  
+                        li 
+                            a(href="#") home 
+                        li.navbars__list-catalog 
+                            a(href="#") catalog
+                            i.fas.fa-caret-down
+                            
+                            ul.navbars__list-item 
+                                li 
+                                    a(href="#") shop 
+                                li 
+                                    a(href="#") single product 
+                                li 
+                                    a(href="#") cart 
+                                li 
+                                    a(href="#") checkout 
+                        li 
+                            a(href="#") about 
+                        li 
+                            a(href="#") blog 
+                        li 
+                            a(href="#") contact 
+                        li 
+                            a(href="#") 
+                                i.fas.fa-shopping-cart 
+                .navbars__menu 
+                    label(for="menu-toggle")
+                        i.fas.fa-bars 
+                    p Menu 
+        section.slide
+            .slide__img
+                img.slide__img-1( src="./img/bg_1.png")
+                img.slide__img-2( src="./img/bg_2.png")
+                .slide__content
+                    p.slide__content-tag # new arrival
+                    p.slide__content-title shoes collection 2019
+                    p.slide__content-decription 
+                        |A small river named Duden flows by their 
+                        |place and supplies it with the necessary regelialia.
+                        | It is a paradisematic country.
+                    a(href="#") discover now
+                .slide__content.-hidden
+                    p.slide__content-tag # new arrival
+                    p.slide__content-title new shoes winter collection
+                    p.slide__content-decription 
+                        |A small river named Duden flows by their 
+                        |place and supplies it with the necessary regelialia.
+                        | It is a paradisematic country.
+                    a(href="#") discover now
+        section.services 
+            +loadService(services)
+        section.products 
+            h2.products__title new shoes arrival
+            p.products__decription Far far away, behind the word mountains,
+                | far from the countries Vokalia and Consonantia
+            +loadProducts(products)
+        section.collection 
+            +loadCollection(collection)
+        section.deal 
+            .deal__img
+                img(src="img/prod-1.png")
+            .deal__infor
+                p Deal of the month 
+                h2 Deal of the month
+                .deal__dead-line
+                    .deal__time 
+                        h2 -61
+                        p days 
+                    .deal__time 
+                        h2 06
+                        p hours
+                    .deal__time 
+                        h2 25
+                        p minutes
+                    .deal__time 
+                        h2 33
+                        p seconds    
+                h1 nike free rn 2019 id
+                p.deal__price 
+                    del $120.00 
+                    span $80.00 
+                .deal__recomend 
+                    .deal__recomend-item
+                        img(src="img/product-6.png")
+                    .deal__recomend-item
+                        img(src="img/product-2.png")
+                    .deal__recomend-item
+                        img(src="img/product-4.png")
+        section.our
+            .our__advantage 
+                .our__item
+                    span.flaticon-handbag 
+                    .our__item-decription 
+                        h3 free shipping 
+                        p Separated they live in. A small river named Duden flows
+                .our__item
+                    span.flaticon-shopping-bag
+                    .our__item-decription 
+                        h3 valuable gifts 
+                        p Separated they live in. A small river named Duden flows
+                .our__item
+                    span.flaticon-payment-security 
+                    .our__item-decription 
+                        h3 all day support
+                        p Separated they live in. A small river named Duden flows
+                .our__item
+                    span.flaticon-customer-service 
+                    .our__item-decription 
+                        h3 all day support 
+                        p Separated they live in. A small river named Duden flows
+            .our__customer 
+                h1 our satisfied customer says 
+                p.our__customer-sum  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+                    |there live the blind texts. Separated they live in
+                .our__customer-img
+                    img(src="img/person_1.jpg")
+                    span
+                        i.fas.fa-quote-left
+                .our__customer-detail    
+                    p 
+                        |Far far away, behind the word mountains,
+                        |far from the countries Vokalia and Consonantia, there live the blind texts.
+                h3.our__customer-name garreth smith
+                p.our__customer-sub marketing manager
+                div.our__customer-btn
+                    button
+                    button
+                    button
+                    button
+                    button
+        section.instagram 
+            h1 follow us on instagram 
+            p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+                |there live the blind texts. Separated they live in        
+            .instagram__list
+                .instagram__item 
+                    img(src="img/gallery-1.jpg")
+                    a(href="#")
+                        i.fab.fa-instagram
+                .instagram__item 
+                    img(src="img/gallery-2.jpg")
+                    a(href="#")
+                        i.fab.fa-instagram
+                .instagram__item 
+                    img(src="img/gallery-3.jpg")
+                    a(href="#")
+                        i.fab.fa-instagram
+                .instagram__item 
+                    img(src="img/gallery-4.jpg")
+                    a(href="#")
+                        i.fab.fa-instagram
+                .instagram__item 
+                    img(src="img/gallery-5.jpg")
+                    a(href="#")
+                        i.fab.fa-instagram
+                .instagram__item 
+                    img(src="img/gallery-6.jpg")
+                    a(href="#")
+                        i.fab.fa-instagram
+            
+
+
+
+
+                
+
+                    
+                
